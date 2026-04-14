@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace SantuarioUM;
+﻿namespace SantuarioUM;
 
 public partial class App : Application
 {
@@ -11,6 +9,7 @@ public partial class App : Application
 
     protected override Window CreateWindow(IActivationState? activationState)
     {
-        return new Window(new AppShell());
+        var shell = Handler.MauiContext.Services.GetService<AppShell>();
+        return new Window(shell);
     }
 }
