@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using SantuarioUM.Utilities.Extensions;
 
 namespace SantuarioUM;
 
@@ -9,6 +10,11 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            // .UseMauiCommunityToolkit()
+            .RegisterPages()
+            .RegisterServices()
+            .RegisterViewModels()
+            .RegisterShellRoutes()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
