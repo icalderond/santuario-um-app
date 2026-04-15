@@ -1,6 +1,7 @@
 using System.Resources;
 using SantuarioUM.Pages;
 using SantuarioUM.Utilities.Interfaces;
+using SantuarioUM.Utilities.Services;
 using SantuarioUM.ViewModels;
 
 namespace SantuarioUM.Utilities.Extensions;
@@ -40,6 +41,7 @@ public static class MauiAppExtensions
     /// <returns></returns>
     public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
     {
+        mauiAppBuilder.Services.AddSingleton<INavigationService, NavigationService>();
         return mauiAppBuilder;
     }
 
