@@ -2,7 +2,9 @@ using SantuarioUM.Utilities.Interfaces;
 
 namespace SantuarioUM.ViewModels;
 
-public class DashViewModel:IDashViewModel
+public class DashViewModel : IDashViewModel
 {
-    
+    public DashViewModel()
+    {
+    }
 }

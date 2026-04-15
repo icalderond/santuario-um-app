@@ -2,8 +2,24 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SantuarioUM.Pages.DashPage">
+             xmlns:models="clr-namespace:SantuarioUM.Models"
+             xmlns:controls="clr-namespace:SantuarioUM.Controls"
+             xmlns:viewModels="clr-namespace:SantuarioUM.ViewModels"
+             x:Class="SantuarioUM.Pages.DashPage"
+             x:DataType="viewModels:DashViewModel"
+             Title="Recorrido del Santuario UM">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <models:ItemMenu x:Key="AtrioItem" Title="Atrio" BackgroundColor="DarkRed" TitleColor="White" />
+            <models:ItemMenu x:Key="SantoItem" Title="Lugar Santo" BackgroundColor="DeepSkyBlue" TitleColor="Black" />
+            <models:ItemMenu x:Key="SantisimoItem" Title="Lugar Santísimo" BackgroundColor="Purple" TitleColor="White" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        
+        <Grid RowDefinitions="*,*,*" RowSpacing="5">
+            <controls:ItemMenuControl Grid.Row="0" ItemSource="{StaticResource  AtrioItem}" />
+            <controls:ItemMenuControl Grid.Row="1" ItemSource="{StaticResource  SantoItem}" />
+            <controls:ItemMenuControl Grid.Row="2" ItemSource="{StaticResource  SantisimoItem}" />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
