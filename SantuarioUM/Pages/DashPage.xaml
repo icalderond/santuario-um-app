@@ -17,9 +17,9 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <Grid RowDefinitions="*,*,*" RowSpacing="5">
-            <controls:ItemMenuControl Grid.Row="0" ItemSource="{StaticResource  AtrioItem}" />
-            <controls:ItemMenuControl Grid.Row="1" ItemSource="{StaticResource  SantoItem}" />
-            <controls:ItemMenuControl Grid.Row="2" ItemSource="{StaticResource  SantisimoItem}" />
+            <controls:ItemMenuControl Grid.Row="0" ItemSource="{StaticResource  AtrioItem}" ItemCommand="{Binding GoToAtrioAsyncCommand}"/>
+            <controls:ItemMenuControl Grid.Row="1" ItemSource="{StaticResource  SantoItem}" ItemCommand="{Binding GoToSantoAsyncCommand}"/>
+            <controls:ItemMenuControl Grid.Row="2" ItemSource="{StaticResource  SantisimoItem}"  ItemCommand="{Binding GoToSantisimoAsyncCommand}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
