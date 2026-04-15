@@ -6,6 +6,9 @@
              x:Name="ControlReference">
     <Grid BackgroundColor="{Binding BackgroundColor}"
           BindingContext="{Binding ItemSource, Source={x:Reference ControlReference}}">
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding  ItemCommand, Source={x:Reference ControlReference}}"></TapGestureRecognizer>
+        </Grid.GestureRecognizers>
         <Label Text="{Binding Title}"
                HorizontalOptions="Center"
                VerticalOptions="Center"
