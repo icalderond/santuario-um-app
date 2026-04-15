@@ -17,6 +17,8 @@ public static class MauiAppExtensions
     {
         mauiAppBuilder.Services.AddSingleton<AppShell>();
         mauiAppBuilder.Services.AddSingleton<DashPage>();
+        mauiAppBuilder.Services.AddSingleton<ArticlePage>();
+        mauiAppBuilder.Services.AddSingleton<ParentArticlePage>();
 
         return mauiAppBuilder;
     }
@@ -30,6 +32,8 @@ public static class MauiAppExtensions
     {
          mauiAppBuilder.Services.AddTransient<IAppShellViewModel, AppShellViewModel>();
          mauiAppBuilder.Services.AddTransient<IDashViewModel, DashViewModel>();
+         mauiAppBuilder.Services.AddTransient<IArticleViewModel, ArticleViewModel>();
+         mauiAppBuilder.Services.AddTransient<IParentArticleViewModel, ParentArticleViewModel>();
         
         return mauiAppBuilder;
     }
@@ -53,6 +57,8 @@ public static class MauiAppExtensions
     {
         Routing.RegisterRoute(nameof(AppShellViewModel), typeof(AppShell));
         Routing.RegisterRoute(nameof(DashViewModel), typeof(DashPage));
+        Routing.RegisterRoute(nameof(ArticleViewModel), typeof(ArticlePage));
+        Routing.RegisterRoute(nameof(ParentArticleViewModel), typeof(ParentArticlePage));
 
         return mauiAppBuilder;
     }
