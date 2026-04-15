@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 using SantuarioUM.Utilities.Extensions;
 
 namespace SantuarioUM;
@@ -10,7 +11,7 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
-            // .UseMauiCommunityToolkit()
+            .UseMauiCommunityToolkit()
             .RegisterPages()
             .RegisterServices()
             .RegisterViewModels()
