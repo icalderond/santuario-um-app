@@ -46,6 +46,7 @@ public static class MauiAppExtensions
     public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
     {
         mauiAppBuilder.Services.AddSingleton<INavigationService, NavigationService>();
+        mauiAppBuilder.Services.AddSingleton<ISantuarioService, SantuarioService>();
         return mauiAppBuilder;
     }
 
