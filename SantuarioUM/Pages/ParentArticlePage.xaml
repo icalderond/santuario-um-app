@@ -6,39 +6,58 @@
              xmlns:models="clr-namespace:SantuarioUM.Models"
              x:Class="SantuarioUM.Pages.ParentArticlePage"
              x:DataType="viewModels:ParentArticleViewModel"
+             x:Name="ControlReference"
              Title="{Binding  CurrentArea.Titulo}">
     <ContentPage.Content>
         <Grid Padding="15,10"
               RowDefinitions="auto,auto,*">
-            <Label Grid.Row="0" Text="{Binding CurrentArea.Descripcion}"/>
-            
+            <Label Grid.Row="0" Text="{Binding CurrentArea.Descripcion}" />
             <Image Grid.Row="1"
                    Margin="0,15,0,0"
                    WidthRequest="200"
                    HeightRequest="200"
-                   BackgroundColor="Cyan"/>
-            <Grid RowDefinitions="auto,*" 
+                   BackgroundColor="LightGray" />
+            <Grid RowDefinitions="auto,*"
                   Grid.Row="2"
                   Margin="0,15,0,0">
                 <Label Text="Muebles" FontAttributes="Bold"
-                       FontSize="Large"/>
+                       FontSize="Large" />
                 <CollectionView Grid.Row="1" ItemsSource="{Binding CurrentArea.Muebles}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="models:Mueble">
-                            <Frame Margin="0,5"
+                            <Border Margin="0,5"
                                    Padding="10"
-                                   BorderColor="LightGray"
-                                   CornerRadius="5">
-                                <StackLayout>
-                                    <Label Text="{Binding  Titulo}"
-                                           FontAttributes="Bold"/>
-                                </StackLayout>
-                            </Frame>
+                                   Stroke="LightGray"
+                                   StrokeThickness="1">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding  BindingContext.NavigateToCommand, Source={x:Reference ControlReference}}" CommandParameter="{Binding Id}"/>
+                                </Border.GestureRecognizers>
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="5"/>
+                                </Border.StrokeShape>
+                                <Grid ColumnDefinitions="auto,*">
+                                    <Border Grid.Column="0">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="25,25,25,25"/>
+                                        </Border.StrokeShape>
+                                        <Image WidthRequest="50"
+                                               HeightRequest="50"
+                                               Aspect="AspectFill" />
+                                    </Border>
+                                    <StackLayout Grid.Column="1"
+                                                 Margin="10,0,0,0"
+                                                 VerticalOptions="Center">
+                                        <Label Text="{Binding  Titulo}"
+                                               LineBreakMode="WordWrap"
+                                               FontAttributes="Bold" />
+                                    </StackLayout>
+                                </Grid>
+                            </Border>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </Grid>
-           
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>
