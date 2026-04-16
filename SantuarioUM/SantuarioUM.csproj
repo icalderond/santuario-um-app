@@ -76,4 +76,8 @@
       <Folder Include="Views\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Resource Include="Resources\Raw\santuario_data_large.json" />
+    </ItemGroup>
+
 </Project>
