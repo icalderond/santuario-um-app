@@ -5,6 +5,7 @@
              xmlns:models="clr-namespace:SantuarioUM.Models"
              xmlns:controls="clr-namespace:SantuarioUM.Controls"
              xmlns:viewModels="clr-namespace:SantuarioUM.ViewModels"
+             xmlns:enums="clr-namespace:SantuarioUM.Utilities.Enums"
              x:Class="SantuarioUM.Pages.DashPage"
              x:DataType="viewModels:DashViewModel"
              Title="Recorrido del Santuario UM">
@@ -17,9 +18,24 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <Grid RowDefinitions="*,*,*" RowSpacing="5">
-            <controls:ItemMenuControl Grid.Row="0" ItemSource="{StaticResource  AtrioItem}" ItemCommand="{Binding GoToAtrioAsyncCommand}"/>
-            <controls:ItemMenuControl Grid.Row="1" ItemSource="{StaticResource  SantoItem}" ItemCommand="{Binding GoToSantoAsyncCommand}"/>
-            <controls:ItemMenuControl Grid.Row="2" ItemSource="{StaticResource  SantisimoItem}"  ItemCommand="{Binding GoToSantisimoAsyncCommand}"/>
+            
+            <!-- ATRIO -->
+            <controls:ItemMenuControl Grid.Row="0" 
+                                      ItemSource="{StaticResource  AtrioItem}" 
+                                      ItemCommand="{Binding GoToNavigationCommand}"
+                                      CommandParameter="{x:Static enums:AreaEnum.Atrio}"/>
+            
+            <!-- LUGAR SANTO -->
+            <controls:ItemMenuControl Grid.Row="1" 
+                                      ItemSource="{StaticResource  SantoItem}" 
+                                      ItemCommand="{Binding GoToNavigationCommand}"
+                                      CommandParameter="{x:Static enums:AreaEnum.LugarSanto}"/>
+            
+            <!-- LUGAR SANTÍSIMO -->
+            <controls:ItemMenuControl Grid.Row="2" 
+                                      ItemSource="{StaticResource  SantisimoItem}"  
+                                      ItemCommand="{Binding GoToNavigationCommand}"
+                                      CommandParameter="{x:Static enums:AreaEnum.LugarSantisimo}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

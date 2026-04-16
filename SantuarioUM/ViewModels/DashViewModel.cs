@@ -1,15 +1,18 @@
 using CommunityToolkit.Mvvm.Input;
+using SantuarioUM.Utilities.Enums;
+using SantuarioUM.Utilities.Extensions;
 using SantuarioUM.Utilities.Interfaces;
 
 namespace SantuarioUM.ViewModels;
 
-public partial class DashViewModel : IDashViewModel
+public partial class DashViewModel : BaseViewModel, IDashViewModel
 {
     #region Private Properties
 
     private readonly INavigationService _navigationService;
+
     #endregion
-    
+
     /// <summary>
     /// Constructor
     /// </summary>
@@ -21,17 +24,14 @@ public partial class DashViewModel : IDashViewModel
 
     #region Methods
 
+    /// <summary>
+    /// Go to navigation async
+    /// </summary>
+    /// <param name="i"></param>
     [RelayCommand]
-    private async void GoToAtrioAsync()=>   GoToNavigation(0);
-    [RelayCommand]
-    private async void GoToSantoAsync()=>   GoToNavigation(1);
-    [RelayCommand]
-    private async void GoToSantisimoAsync()=>   GoToNavigation(2);
-    
-
-    private async Task GoToNavigation(int i)
+    private async Task GoToNavigationAsync(AreaEnum i)
     {
-        await _navigationService.ShellGoToAsync($"{nameof(ParentArticleViewModel)}?parentArticleId={i}");
+        await _navigationService.ShellGoToAsync($"{nameof(ParentArticleViewModel)}?area={i.GetDescription()}");
     }
 
     #endregion
