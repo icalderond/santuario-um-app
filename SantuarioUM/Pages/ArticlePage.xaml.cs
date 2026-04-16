@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SantuarioUM.Utilities.Interfaces;
 
 namespace SantuarioUM.Pages;
 
 public partial class ArticlePage : ContentPage
 {
-    public ArticlePage()
+    public ArticlePage(IArticleViewModel viewModel)
     {
         InitializeComponent();
+        this.BindingContext = viewModel;
     }
 }

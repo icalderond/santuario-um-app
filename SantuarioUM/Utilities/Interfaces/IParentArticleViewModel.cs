@@ -1,6 +1,6 @@
 namespace SantuarioUM.Utilities.Interfaces;
 
-public class IParentArticleViewModel
+public interface IParentArticleViewModel
 {
     
 }
