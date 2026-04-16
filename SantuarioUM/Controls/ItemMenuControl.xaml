@@ -7,7 +7,7 @@
     <Grid BackgroundColor="{Binding BackgroundColor}"
           BindingContext="{Binding ItemSource, Source={x:Reference ControlReference}}">
         <Grid.GestureRecognizers>
-            <TapGestureRecognizer Command="{Binding  ItemCommand, Source={x:Reference ControlReference}}"></TapGestureRecognizer>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
         </Grid.GestureRecognizers>
         <Label Text="{Binding Title}"
                HorizontalOptions="Center"

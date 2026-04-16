@@ -30,6 +30,25 @@ public partial class ItemMenuControl : ContentView
     }
     
     /// <summary>
+    /// The ItemMenu bindable property
+    /// </summary>
+    public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(
+        propertyName: nameof(CommandParameter),
+        returnType: typeof(object),
+        declaringType: typeof(ItemMenuControl),
+        defaultValue: null,
+        defaultBindingMode: BindingMode.TwoWay);
+
+    /// <summary>
+    /// Get or set the ItemMenu Property
+    /// </summary>
+    public object CommandParameter
+    {
+        get => (object)GetValue(CommandParameterProperty);
+        set => SetValue(CommandParameterProperty, value);
+    }
+    
+    /// <summary>
     /// Gets or sets the ItemCommand Property.
     /// </summary>
     public ICommand ItemCommand
@@ -47,4 +66,12 @@ public partial class ItemMenuControl : ContentView
         declaringType: typeof(ItemMenuControl),
         defaultValue:null,
         defaultBindingMode: BindingMode.TwoWay );
+
+    private void TapGestureRecognizer_OnTapped(object? sender, TappedEventArgs e)
+    {
+        if (ItemCommand.CanExecute(CommandParameter))
+        {
+            ItemCommand.Execute(CommandParameter);
+        }
+    }
 }
