@@ -60,6 +60,24 @@
 
         <!-- Custom Fonts -->
         <MauiFont Include="Resources\Fonts\*"/>
+        <MauiAsset Include="Resources\Images\img_altar_incienso.png">
+          <LogicalName>img_altar_incienso.png</LogicalName>
+        </MauiAsset>
+        <MauiAsset Include="Resources\Images\img_altar_sacrificio.png">
+          <LogicalName>img_altar_sacrificio.png</LogicalName>
+        </MauiAsset>
+        <MauiAsset Include="Resources\Images\img_arca_pacto.png">
+          <LogicalName>img_arca_pacto.png</LogicalName>
+        </MauiAsset>
+        <MauiAsset Include="Resources\Images\img_candelabro.png">
+          <LogicalName>img_candelabro.png</LogicalName>
+        </MauiAsset>
+        <MauiAsset Include="Resources\Images\img_lavacro.png">
+          <LogicalName>img_lavacro.png</LogicalName>
+        </MauiAsset>
+        <MauiAsset Include="Resources\Images\img_mesa_panes.png">
+          <LogicalName>img_mesa_panes.png</LogicalName>
+        </MauiAsset>
 
         <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
         <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)"/>

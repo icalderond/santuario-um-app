@@ -14,6 +14,7 @@ public class Area
 {
     public string Id { get; set; }
     public string Titulo { get; set; }
+    public string Imagen { get; set; }
     public string Descripcion { get; set; }
     public List<Mueble> Muebles { get; set; }
 }
@@ -22,6 +23,7 @@ public class Mueble
 {
     public string Id { get; set; }
     public string Titulo { get; set; }
+    public string Imagen { get; set; }
     public Dimensiones Dimensiones { get; set; }
 }
 
