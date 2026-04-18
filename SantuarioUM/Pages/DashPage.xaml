@@ -2,40 +2,91 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:SantuarioUM.Models"
-             xmlns:controls="clr-namespace:SantuarioUM.Controls"
              xmlns:viewModels="clr-namespace:SantuarioUM.ViewModels"
              xmlns:enums="clr-namespace:SantuarioUM.Utilities.Enums"
              x:Class="SantuarioUM.Pages.DashPage"
              x:DataType="viewModels:DashViewModel"
              Title="Recorrido del Santuario UM">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <models:ItemMenu x:Key="AtrioItem" Title="Atrio" BackgroundColor="DarkRed" TitleColor="White" />
-            <models:ItemMenu x:Key="SantoItem" Title="Lugar Santo" BackgroundColor="DeepSkyBlue" TitleColor="Black" />
-            <models:ItemMenu x:Key="SantisimoItem" Title="Lugar Santísimo" BackgroundColor="Purple" TitleColor="White" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
     <ContentPage.Content>
         <Grid RowDefinitions="*,*,*" RowSpacing="5">
+            <Image Grid.RowSpan="3" Source="img_dashboard"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Fill"
+                   Aspect="AspectFill">
+            </Image>
+            <!-- Chevron -->
+            <Border Grid.Row="0"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    BackgroundColor="White"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End"
+                    Margin="0,0,15,0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="25" />
+                </Border.StrokeShape>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToNavigationCommand}"
+                                          CommandParameter="{x:Static enums:AreaEnum.Atrio}" />
+                </Border.GestureRecognizers>
+
+                <Grid>
+                    <Label Text=">"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center" />
+                </Grid>
+            </Border>
+
+            <!-- Chevron -->
+            <Border Grid.Row="1"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    BackgroundColor="White"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End"
+                    Margin="0,0,15,0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="25" />
+                </Border.StrokeShape>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToNavigationCommand}"
+                                          CommandParameter="{x:Static enums:AreaEnum.LugarSanto}" />
+                </Border.GestureRecognizers>
+
+                <Grid>
+                    <Label Text=">"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center" />
+                </Grid>
+            </Border>
             
-            <!-- ATRIO -->
-            <controls:ItemMenuControl Grid.Row="0" 
-                                      ItemSource="{StaticResource  AtrioItem}" 
-                                      ItemCommand="{Binding GoToNavigationCommand}"
-                                      CommandParameter="{x:Static enums:AreaEnum.Atrio}"/>
-            
-            <!-- LUGAR SANTO -->
-            <controls:ItemMenuControl Grid.Row="1" 
-                                      ItemSource="{StaticResource  SantoItem}" 
-                                      ItemCommand="{Binding GoToNavigationCommand}"
-                                      CommandParameter="{x:Static enums:AreaEnum.LugarSanto}"/>
-            
-            <!-- LUGAR SANTÍSIMO -->
-            <controls:ItemMenuControl Grid.Row="2" 
-                                      ItemSource="{StaticResource  SantisimoItem}"  
-                                      ItemCommand="{Binding GoToNavigationCommand}"
-                                      CommandParameter="{x:Static enums:AreaEnum.LugarSantisimo}"/>
+            <!-- Chevron -->
+            <Border Grid.Row="2"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    BackgroundColor="White"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End"
+                    Margin="0,0,15,0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="25" />
+                </Border.StrokeShape>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToNavigationCommand}"
+                                          CommandParameter="{x:Static enums:AreaEnum.LugarSantisimo}" />
+                </Border.GestureRecognizers>
+                <Grid>
+                    <Label Text=">"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center" />
+                </Grid>
+            </Border>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
