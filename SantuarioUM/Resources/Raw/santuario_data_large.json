@@ -6,7 +6,7 @@
     {
       "id": "atrio",
       "titulo": "Atrio",
-      "imagen": "",
+      "imagen": "img_atrio",
       "descripcion": "El atrio era la primera sección del santuario, accesible para el pueblo. Medía 100 codos de largo por 50 de ancho, rodeado por cortinas de lino fino sostenidas por columnas con bases de bronce (Éxodo 38:9-15). En este lugar se realizaban los sacrificios y la purificación, representando la etapa de la justificación. Aquí el pecador reconocía su condición, confesaba su pecado y recibía perdón mediante un sustituto. Los muebles estaban hechos de bronce, símbolo de juicio, recordando la gravedad del pecado y la necesidad de expiación.",
       "muebles": [
         {
@@ -52,7 +52,7 @@
     {
       "id": "lugar_santo",
       "titulo": "Lugar Santo",
-      "imagen": "",
+      "imagen": "img_santo",
       "descripcion": "El lugar santo era la segunda sección del santuario, donde solo los sacerdotes podían ministrar. Estaba cubierto de oro, representando la gloria y majestad divina. Aquí se llevaba a cabo el ministerio diario, simbolizando la etapa de la santificación, donde el creyente crece espiritualmente mediante la comunión con Dios, la luz de su verdad y la oración constante.",
       "muebles": [
         {
@@ -117,7 +117,7 @@
     {
       "id": "lugar_santisimo",
       "titulo": "Lugar Santísimo",
-      "imagen": "",
+      "imagen": "img_santisimo",
       "descripcion": "El lugar santísimo era la sección más sagrada del santuario, donde se manifestaba la presencia de Dios. Solo el sumo sacerdote podía entrar una vez al año en el Día de la Expiación. Representa la etapa final del plan de salvación: la glorificación y el juicio divino.",
       "muebles": [
         {
