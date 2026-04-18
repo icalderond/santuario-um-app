@@ -10,58 +10,81 @@
              BackgroundColor="#F5E6C8"
              Title="{Binding  CurrentArea.Titulo}">
     <ContentPage.Content>
-        <Grid Padding="15,10"
-              RowDefinitions="auto,auto,*">
-            <Label Grid.Row="0" Text="{Binding CurrentArea.Descripcion}" />
-            <Image Grid.Row="1"
-                   Margin="0,15,0,0"
-                   WidthRequest="200"
-                   HeightRequest="200"
-                   BackgroundColor="Transparent" 
-                   Source="img_atrio"/>
-            <Grid RowDefinitions="auto,*"
-                  Grid.Row="2"
-                  Margin="0,15,0,0">
-                <Label Text="Muebles" FontAttributes="Bold"
-                       FontSize="Large" />
-                <CollectionView Grid.Row="1" ItemsSource="{Binding CurrentArea.Muebles}">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate x:DataType="models:Mueble">
-                            <Border Margin="0,10"
-                                   Padding="10"
-                                   BackgroundColor="White"
-                                   StrokeThickness="0">
-                                <Border.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding  BindingContext.NavigateToCommand, Source={x:Reference ControlReference}}" CommandParameter="{Binding Id}"/>
-                                </Border.GestureRecognizers>
-                                <Border.StrokeShape>
-                                    <RoundRectangle CornerRadius="5"/>
-                                </Border.StrokeShape>
-                                <Grid ColumnDefinitions="auto,*">
-                                    <Border Grid.Column="0" BackgroundColor="#F7F3ED"
-                                            StrokeThickness="0">
-                                        <Border.StrokeShape>
-                                            <RoundRectangle CornerRadius="25,25,25,25"/>
-                                        </Border.StrokeShape>
-                                        <Image WidthRequest="50"
-                                               HeightRequest="50"
-                                               Aspect="AspectFill" 
-                                               Source="{Binding  Imagen}"/>
-                                    </Border>
-                                    <StackLayout Grid.Column="1"
-                                                 Margin="10,0,0,0"
-                                                 VerticalOptions="Center">
-                                        <Label Text="{Binding  Titulo}"
-                                               LineBreakMode="WordWrap"
-                                               FontAttributes="Bold" />
-                                    </StackLayout>
-                                </Grid>
-                            </Border>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+        <ScrollView>
+            <Grid Padding="15,0,15,10"
+                  RowDefinitions="auto,auto,*">
+                <Image Grid.Row="0"
+                       WidthRequest="400"
+                       HeightRequest="300"
+                       BackgroundColor="Transparent"
+                       Source="{Binding CurrentArea.Imagen}"
+                       Aspect="AspectFill"/>
+                <Label Grid.Row="1" Text="{Binding CurrentArea.Descripcion}"
+                       Margin="0,10,0,0"/>
+                <Grid RowDefinitions="auto,*"
+                      Grid.Row="2"
+                      Margin="0,15,0,0">
+                    <Label Text="Muebles" FontAttributes="Bold"
+                           FontSize="Large" />
+                    <CollectionView Grid.Row="1" ItemsSource="{Binding CurrentArea.Muebles}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:Mueble">
+                                <Border Margin="0,10"
+                                        Padding="10"
+                                        BackgroundColor="White"
+                                        StrokeThickness="0">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="5" />
+                                    </Border.StrokeShape>
+                                    <Grid ColumnDefinitions="auto,*,auto">
+                                        <Border Grid.Column="0" BackgroundColor="#F7F3ED"
+                                                StrokeThickness="0">
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="25,25,25,25" />
+                                            </Border.StrokeShape>
+                                            <Image WidthRequest="50"
+                                                   HeightRequest="50"
+                                                   Aspect="AspectFill"
+                                                   Source="{Binding  Imagen}" />
+                                        </Border>
+                                        <StackLayout Grid.Column="1"
+                                                     Margin="10,0,0,0"
+                                                     VerticalOptions="Center">
+                                            <Label Text="{Binding  Titulo}"
+                                                   LineBreakMode="WordWrap"
+                                                   FontAttributes="Bold" />
+                                        </StackLayout>
+                                        <Border Grid.Column="2"
+                                                HeightRequest="50"
+                                                WidthRequest="50"
+                                                BackgroundColor="#F5E6C8"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="End"
+                                                StrokeThickness="0"
+                                                Margin="0,0,15,0">
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="25" />
+                                            </Border.StrokeShape>
+                                            <Border.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                    Command="{Binding  BindingContext.NavigateToCommand, Source={x:Reference ControlReference}}"
+                                                    CommandParameter="{Binding Id}" />
+                                            </Border.GestureRecognizers>
+                                            <Grid>
+                                                <Label Text=">"
+                                                       FontAttributes="Bold"
+                                                       FontSize="Large"
+                                                       VerticalOptions="Center"
+                                                       HorizontalOptions="Center" />
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
             </Grid>
-
-        </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

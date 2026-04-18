@@ -18,9 +18,10 @@
             <Border Grid.Row="0"
                     HeightRequest="50"
                     WidthRequest="50"
-                    BackgroundColor="White"
+                    BackgroundColor="#F5E6C8"
                     VerticalOptions="Center"
                     HorizontalOptions="End"
+                    StrokeThickness="0"
                     Margin="0,0,15,0">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="25" />
@@ -43,9 +44,10 @@
             <Border Grid.Row="1"
                     HeightRequest="50"
                     WidthRequest="50"
-                    BackgroundColor="White"
+                    BackgroundColor="#F5E6C8"
                     VerticalOptions="Center"
                     HorizontalOptions="End"
+                    StrokeThickness="0"
                     Margin="0,0,15,0">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="25" />
@@ -68,9 +70,10 @@
             <Border Grid.Row="2"
                     HeightRequest="50"
                     WidthRequest="50"
-                    BackgroundColor="White"
+                    BackgroundColor="#F5E6C8"
                     VerticalOptions="Center"
                     HorizontalOptions="End"
+                    StrokeThickness="0"
                     Margin="0,0,15,0">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="25" />
