@@ -16,7 +16,8 @@
                    Margin="0,15,0,0"
                    WidthRequest="200"
                    HeightRequest="200"
-                   BackgroundColor="LightGray" />
+                   BackgroundColor="Transparent" 
+                   Source="{Binding CurrentArea.Imagen}"/>
             <Grid RowDefinitions="auto,*"
                   Grid.Row="2"
                   Margin="0,15,0,0">
@@ -42,7 +43,8 @@
                                         </Border.StrokeShape>
                                         <Image WidthRequest="50"
                                                HeightRequest="50"
-                                               Aspect="AspectFill" />
+                                               Aspect="AspectFill" 
+                                               Source="{Binding  Imagen}"/>
                                     </Border>
                                     <StackLayout Grid.Column="1"
                                                  Margin="10,0,0,0"

@@ -10,25 +10,23 @@
         <ScrollView Padding="15,10">
             <Grid RowDefinitions="auto, *">
                 <StackLayout Spacing="15" Grid.Row="1">
+                    <Image WidthRequest="200"
+                           HeightRequest="200"
+                           BackgroundColor="Transparent" 
+                           Source="{Binding CurrentMueble.Imagen}"/>
                     <StackLayout>
                         <Label Text="Rito" FontAttributes="Bold"
                                TextTransform="Uppercase" />
-                        <Image WidthRequest="100" HeightRequest="100"
-                               BackgroundColor="LightGray" />
                         <Label Text="{Binding CurrentMueble.Dimensiones.Rito.Contenido}" />
                     </StackLayout>
                     <StackLayout>
                         <Label Text="Cumplimiento" FontAttributes="Bold"
                                TextTransform="Uppercase" />
-                        <Image WidthRequest="100" HeightRequest="100"
-                               BackgroundColor="LightGray" />
                         <Label Text="{Binding CurrentMueble.Dimensiones.Cumplimiento.Contenido}" />
                     </StackLayout>
                     <StackLayout>
                         <Label Text="Aplicación" FontAttributes="Bold"
                                TextTransform="Uppercase" />
-                        <Image WidthRequest="100" HeightRequest="100"
-                               BackgroundColor="LightGray" />
                         <Label Text="{Binding CurrentMueble.Dimensiones.Aplicacion.Contenido}" />
                     </StackLayout>
                 </StackLayout>
