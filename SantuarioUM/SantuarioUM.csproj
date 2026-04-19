@@ -2,8 +2,7 @@
 
     <PropertyGroup>
         <TargetFrameworks>net10.0-android</TargetFrameworks>
-        <TargetFrameworks Condition="!$([MSBuild]::IsOSPlatform('linux'))">$(TargetFrameworks);net10.0-ios;net10.0-maccatalyst</TargetFrameworks>
-        <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net10.0-windows10.0.19041.0</TargetFrameworks>
+<!--        <TargetFrameworks Condition="!$([MSBuild]::IsOSPlatform('linux'))">$(TargetFrameworks);net10.0-ios;net10.0-maccatalyst</TargetFrameworks>-->
 
         <!-- Note for MacCatalyst:
         The default runtime is maccatalyst-x64, except in Release config, in which case the default is maccatalyst-x64;maccatalyst-arm64.
@@ -55,7 +54,7 @@
 
     <ItemGroup>
         <!-- App Icon -->
-        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4"/>
+        <MauiIcon Include="Resources\AppIcon\appicon.png" />
 
         <!-- Splash Screen -->
         <MauiSplashScreen Include="Resources\Images\splash_santuario.png"
@@ -68,18 +67,6 @@
 
         <!-- Custom Fonts -->
         <MauiFont Include="Resources\Fonts\*"/>
-        <MauiAsset Include="Resources\Images\img_altar_incienso.png">
-          <LogicalName>img_altar_incienso.png</LogicalName>
-        </MauiAsset>
-        <MauiAsset Include="Resources\Images\img_altar_sacrificio.png">
-          <LogicalName>img_altar_sacrificio.png</LogicalName>
-        </MauiAsset>
-        <MauiAsset Include="Resources\Images\img_arca_pacto.png">
-          <LogicalName>img_arca_pacto.png</LogicalName>
-        </MauiAsset>
-        <MauiAsset Include="Resources\Images\img_candelabro.png">
-          <LogicalName>img_candelabro.png</LogicalName>
-        </MauiAsset>
         <MauiAsset Include="Resources\Images\img_lavacro.png">
           <LogicalName>img_lavacro.png</LogicalName>
         </MauiAsset>
