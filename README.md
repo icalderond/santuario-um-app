@@ -30,16 +30,8 @@ SantuarioUM is a cross-platform mobile application built with .NET MAUI that pro
 
 📁 **[View Screenshots Folder](screenshots/)**
 
-The `screenshots/` directory contains visual demonstrations of the app's interface. To view the screenshots:
-
-1. Navigate to the [screenshots/](screenshots/) folder in this repository
-2. Screenshots include:
-   - App launch and splash screens
-   - Main dashboard navigation
-   - Article content views
-   - Detailed sanctuary information displays
-
-*Note: Screenshots are optimized for web display (400px width) to ensure fast loading. If screenshots are missing, run the app on an emulator and capture new images.*
+![Main Article View](screenshots/mainarticle_ss.jpg)
+*Main article view displaying sanctuary content with liturgical information*
 
 ## Architecture
 
