@@ -8,7 +8,7 @@
              x:Class="SantuarioUM.Pages.ParentArticlePage"
              x:DataType="viewModels:ParentArticleViewModel"
              x:Name="ControlReference"
-             BackgroundColor="#F5E6C8"
+             BackgroundColor="{StaticResource Cottonseed}"
              Title="{Binding  CurrentArea.Titulo}">
     <ContentPage.Content>
         <ScrollView>
@@ -38,7 +38,7 @@
                                         <RoundRectangle CornerRadius="5" />
                                     </Border.StrokeShape>
                                     <Grid ColumnDefinitions="auto,*,auto">
-                                        <Border Grid.Column="0" BackgroundColor="#F7F3ED"
+                                        <Border Grid.Column="0" BackgroundColor="{StaticResource CrystalCut}"
                                                 StrokeThickness="0">
                                             <Border.StrokeShape>
                                                 <RoundRectangle CornerRadius="25,25,25,25" />
@@ -58,7 +58,7 @@
                                         <Border Grid.Column="2"
                                                 HeightRequest="50"
                                                 WidthRequest="50"
-                                                BackgroundColor="#F5E6C8"
+                                                BackgroundColor="{StaticResource Cottonseed}"
                                                 VerticalOptions="Center"
                                                 HorizontalOptions="End"
                                                 StrokeThickness="0"

@@ -6,7 +6,7 @@
              xmlns:lang="clr-namespace:SantuarioUM.Resources.Languages"
              x:Class="SantuarioUM.Pages.ArticlePage"
              x:DataType="viewModels:ArticleViewModel"
-             BackgroundColor="#F5E6C8"
+             BackgroundColor="{StaticResource Cottonseed}"
              Title="{Binding CurrentMueble.Titulo}">
     <ContentPage.Content>
         <ScrollView Padding="15,10">
