@@ -5,12 +5,13 @@
              xmlns:viewModels="clr-namespace:SantuarioUM.ViewModels"
              xmlns:enums="clr-namespace:SantuarioUM.Utilities.Enums"
              xmlns:lang="clr-namespace:SantuarioUM.Resources.Languages"
+             xmlns:constants="clr-namespace:SantuarioUM.Utilities.Constants"
              x:Class="SantuarioUM.Pages.DashPage"
              x:DataType="viewModels:DashViewModel"
              Title="{x:Static lang:TextResources.DashTileText}">
     <ContentPage.Content>
         <Grid RowDefinitions="*,*,*" RowSpacing="5">
-            <Image Grid.RowSpan="3" Source="img_dashboard"
+            <Image Grid.RowSpan="3" Source="{x:Static constants:ImageConstants.ImageDashboard}"
                    HorizontalOptions="Fill"
                    VerticalOptions="Fill"
                    Aspect="AspectFill">
@@ -66,7 +67,7 @@
                            HorizontalOptions="Center" />
                 </Grid>
             </Border>
-            
+
             <!-- Chevron -->
             <Border Grid.Row="2"
                     HeightRequest="50"
