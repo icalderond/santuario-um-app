@@ -93,4 +93,19 @@
       <Resource Include="Resources\Raw\santuario_data_large.json" />
     </ItemGroup>
 
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\Languages\TextResources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>TextResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\Languages\TextResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>TextResources.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>

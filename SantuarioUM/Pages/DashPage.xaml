@@ -4,9 +4,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:SantuarioUM.ViewModels"
              xmlns:enums="clr-namespace:SantuarioUM.Utilities.Enums"
+             xmlns:lang="clr-namespace:SantuarioUM.Resources.Languages"
              x:Class="SantuarioUM.Pages.DashPage"
              x:DataType="viewModels:DashViewModel"
-             Title="Recorrido del Santuario UM">
+             Title="{x:Static lang:TextResources.DashTileText}">
     <ContentPage.Content>
         <Grid RowDefinitions="*,*,*" RowSpacing="5">
             <Image Grid.RowSpan="3" Source="img_dashboard"

@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:SantuarioUM.ViewModels"
              xmlns:models="clr-namespace:SantuarioUM.Models"
+             xmlns:lang="clr-namespace:SantuarioUM.Resources.Languages"
              x:Class="SantuarioUM.Pages.ParentArticlePage"
              x:DataType="viewModels:ParentArticleViewModel"
              x:Name="ControlReference"
@@ -24,7 +25,7 @@
                 <Grid RowDefinitions="auto,*"
                       Grid.Row="2"
                       Margin="0,15,0,0">
-                    <Label Text="Muebles" FontAttributes="Bold"
+                    <Label Text="{x:Static lang:TextResources.FurnituresText}" FontAttributes="Bold"
                            FontSize="Large" />
                     <CollectionView Grid.Row="1" ItemsSource="{Binding CurrentArea.Muebles}">
                         <CollectionView.ItemTemplate>
