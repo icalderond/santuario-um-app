@@ -6,92 +6,33 @@
              xmlns:enums="clr-namespace:SantuarioUM.Utilities.Enums"
              xmlns:lang="clr-namespace:SantuarioUM.Resources.Languages"
              xmlns:constants="clr-namespace:SantuarioUM.Utilities.Constants"
+             xmlns:uiControls="clr-namespace:SantuarioUM.UIControls"
              x:Class="SantuarioUM.Pages.DashPage"
              x:DataType="viewModels:DashViewModel"
-             Title="{x:Static lang:TextResources.DashTileText}">
+             Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <Grid RowDefinitions="*,*,*" RowSpacing="5">
-            <Image Grid.RowSpan="3" Source="{x:Static constants:ImageConstants.ImageDashboard}"
-                   HorizontalOptions="Fill"
-                   VerticalOptions="Fill"
-                   Aspect="AspectFill">
-            </Image>
-            <!-- Chevron -->
-            <Border Grid.Row="0"
-                    HeightRequest="50"
-                    WidthRequest="50"
-                    BackgroundColor="{StaticResource Cottonseed}"
-                    VerticalOptions="Center"
-                    HorizontalOptions="End"
-                    StrokeThickness="0"
-                    Margin="0,0,15,0">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="25" />
-                </Border.StrokeShape>
-                <Border.GestureRecognizers>
+        <Grid RowDefinitions="*,*,*" RowSpacing="15"
+              Padding="15">
+            <uiControls:DashItem Grid.Row="0" TitleText="ATRIO" ImageSource="atrio_outer_court_highres">
+                <uiControls:DashItem.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToNavigationCommand}"
                                           CommandParameter="{x:Static enums:AreaEnum.Atrio}" />
-                </Border.GestureRecognizers>
-
-                <Grid>
-                    <Label Text=">"
-                           FontAttributes="Bold"
-                           FontSize="Large"
-                           VerticalOptions="Center"
-                           HorizontalOptions="Center" />
-                </Grid>
-            </Border>
-
-            <!-- Chevron -->
-            <Border Grid.Row="1"
-                    HeightRequest="50"
-                    WidthRequest="50"
-                    BackgroundColor="{StaticResource Cottonseed}"
-                    VerticalOptions="Center"
-                    HorizontalOptions="End"
-                    StrokeThickness="0"
-                    Margin="0,0,15,0">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="25" />
-                </Border.StrokeShape>
-                <Border.GestureRecognizers>
+                </uiControls:DashItem.GestureRecognizers>
+            </uiControls:DashItem>
+            
+            <uiControls:DashItem Grid.Row="1" TitleText="LUGAR SANTO" ImageSource="lugar_santo_highres">
+                <uiControls:DashItem.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToNavigationCommand}"
-                                          CommandParameter="{x:Static enums:AreaEnum.LugarSanto}" />
-                </Border.GestureRecognizers>
-
-                <Grid>
-                    <Label Text=">"
-                           FontAttributes="Bold"
-                           FontSize="Large"
-                           VerticalOptions="Center"
-                           HorizontalOptions="Center" />
-                </Grid>
-            </Border>
-
-            <!-- Chevron -->
-            <Border Grid.Row="2"
-                    HeightRequest="50"
-                    WidthRequest="50"
-                    BackgroundColor="{StaticResource Cottonseed}"
-                    VerticalOptions="Center"
-                    HorizontalOptions="End"
-                    StrokeThickness="0"
-                    Margin="0,0,15,0">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="25" />
-                </Border.StrokeShape>
-                <Border.GestureRecognizers>
+                                          CommandParameter="{x:Static enums:AreaEnum.Atrio}" />
+                </uiControls:DashItem.GestureRecognizers>
+            </uiControls:DashItem>
+            
+            <uiControls:DashItem Grid.Row="2" TitleText="LUGAR SANTÍSIMO" ImageSource="lugar_santisimo_highres">
+                <uiControls:DashItem.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToNavigationCommand}"
-                                          CommandParameter="{x:Static enums:AreaEnum.LugarSantisimo}" />
-                </Border.GestureRecognizers>
-                <Grid>
-                    <Label Text=">"
-                           FontAttributes="Bold"
-                           FontSize="Large"
-                           VerticalOptions="Center"
-                           HorizontalOptions="Center" />
-                </Grid>
-            </Border>
+                                          CommandParameter="{x:Static enums:AreaEnum.Atrio}" />
+                </uiControls:DashItem.GestureRecognizers>
+            </uiControls:DashItem>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
