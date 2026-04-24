@@ -4,8 +4,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:SantuarioUM.ViewModels"
              xmlns:enums="clr-namespace:SantuarioUM.Utilities.Enums"
-             xmlns:lang="clr-namespace:SantuarioUM.Resources.Languages"
-             xmlns:constants="clr-namespace:SantuarioUM.Utilities.Constants"
              xmlns:uiControls="clr-namespace:SantuarioUM.UIControls"
              x:Class="SantuarioUM.Pages.DashPage"
              x:DataType="viewModels:DashViewModel"
@@ -19,14 +17,14 @@
                                           CommandParameter="{x:Static enums:AreaEnum.Atrio}" />
                 </uiControls:DashItem.GestureRecognizers>
             </uiControls:DashItem>
-            
+
             <uiControls:DashItem Grid.Row="1" TitleText="LUGAR SANTO" ImageSource="lugar_santo_highres">
                 <uiControls:DashItem.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToNavigationCommand}"
                                           CommandParameter="{x:Static enums:AreaEnum.Atrio}" />
                 </uiControls:DashItem.GestureRecognizers>
             </uiControls:DashItem>
-            
+
             <uiControls:DashItem Grid.Row="2" TitleText="LUGAR SANTÍSIMO" ImageSource="lugar_santisimo_highres">
                 <uiControls:DashItem.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToNavigationCommand}"
