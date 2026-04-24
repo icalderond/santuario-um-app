@@ -1,0 +1,65 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:models="clr-namespace:SantuarioUM.Models"
+                    xmlns:viewModels="clr-namespace:SantuarioUM.ViewModels">
+    <!-- Data template furniture -->
+    <DataTemplate x:Key="FurnituresKey" x:DataType="models:Mueble">
+        <Border Margin="0,10"
+                Padding="10"
+                BackgroundColor="White"
+                StrokeThickness="0">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="5" />
+            </Border.StrokeShape>
+            <Grid ColumnDefinitions="auto,*,auto">
+                <Border Grid.Column="0" BackgroundColor="{StaticResource CrystalCut}"
+                        StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="25,25,25,25" />
+                    </Border.StrokeShape>
+                    <Image WidthRequest="50"
+                           HeightRequest="50"
+                           Aspect="AspectFill"
+                           Source="{Binding  Imagen}" />
+                </Border>
+                <StackLayout Grid.Column="1"
+                             Margin="10,0,0,0"
+                             VerticalOptions="Center">
+                    <Label Text="{Binding  Titulo}"
+                           LineBreakMode="WordWrap"
+                           FontAttributes="Bold" />
+                </StackLayout>
+                <Border Grid.Column="2"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        BackgroundColor="{StaticResource Cottonseed}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        StrokeThickness="0"
+                        Margin="0,0,15,0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="25" />
+                    </Border.StrokeShape>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding  NavigateToCommand,  Source={x:RelativeSource  AncestorType={x:Type viewModels:ParentArticleViewModel}}}"
+                            CommandParameter="{Binding Id}" />
+                    </Border.GestureRecognizers>
+                    <Grid>
+                        <Label Text=">"
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </DataTemplate>
+    
+    <DataTemplate x:Key="DescriptionTemplate" x:DataType="x:String">
+        <Label
+            Text="{Binding .}"
+            TextColor="Black" />
+    </DataTemplate>
+</ResourceDictionary>

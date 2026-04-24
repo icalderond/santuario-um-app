@@ -16,6 +16,8 @@
                            HeightRequest="400"
                            BackgroundColor="Transparent"
                            Source="{Binding CurrentMueble.Imagen}" />
+                    
+                    <!-- Ritual -->
                     <StackLayout>
                         <Label Text="{x:Static lang:TextResources.RitualText}" FontAttributes="Bold"
                                TextTransform="Uppercase"
@@ -23,16 +25,11 @@
                         <Label Text="{Binding CurrentMueble.Dimensiones.Rito.Contenido}" />
                         <Label Margin="0,10,0,0" Text="{x:Static lang:TextResources.BibleVersesText}"
                                FontAttributes="Bold" />
-                        <CollectionView ItemsSource="{Binding CurrentMueble.Dimensiones.Rito.Citas}">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate x:DataType="x:String">
-                                    <Label
-                                        Text="{Binding .}"
-                                        TextColor="Black" />
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
+                        <CollectionView ItemsSource="{Binding CurrentMueble.Dimensiones.Rito.Citas}"
+                                        ItemTemplate="{StaticResource DescriptionTemplate}"/>
                     </StackLayout>
+                    
+                    <!-- Fulfilment -->
                     <StackLayout>
                         <Label Text="{x:Static lang:TextResources.FulfilmentText}" FontAttributes="Bold"
                                TextTransform="Uppercase"
@@ -40,16 +37,11 @@
                         <Label Text="{Binding CurrentMueble.Dimensiones.Cumplimiento.Contenido}" />
                         <Label Margin="0,10,0,0" Text="{x:Static lang:TextResources.BibleVersesText}"
                                FontAttributes="Bold" />
-                        <CollectionView ItemsSource="{Binding CurrentMueble.Dimensiones.Rito.Citas}">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate x:DataType="x:String">
-                                    <Label
-                                        Text="{Binding .}"
-                                        TextColor="Black" />
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
+                        <CollectionView ItemsSource="{Binding CurrentMueble.Dimensiones.Rito.Citas}"
+                                        ItemTemplate="{StaticResource DescriptionTemplate}"/>
                     </StackLayout>
+                    
+                    <!-- Application -->
                     <StackLayout>
                         <Label Text="{x:Static lang:TextResources.ApplicationText}" FontAttributes="Bold"
                                TextTransform="Uppercase"
@@ -57,15 +49,8 @@
                         <Label Text="{Binding CurrentMueble.Dimensiones.Aplicacion.Contenido}" />
                         <Label Margin="0,10,0,0" Text="{x:Static lang:TextResources.BibleVersesText}"
                                FontAttributes="Bold" />
-                        <CollectionView ItemsSource="{Binding CurrentMueble.Dimensiones.Rito.Citas}">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate x:DataType="x:String">
-                                    <Label
-                                        Text="{Binding .}"
-                                        TextColor="Black" />
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
+                        <CollectionView ItemsSource="{Binding CurrentMueble.Dimensiones.Rito.Citas}"
+                                        ItemTemplate="{StaticResource DescriptionTemplate}"/>
                     </StackLayout>
                 </StackLayout>
             </Grid>
