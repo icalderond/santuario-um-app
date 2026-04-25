@@ -21,14 +21,14 @@
             <uiControls:DashItem Grid.Row="1" TitleText="LUGAR SANTO" ImageSource="lugar_santo_highres">
                 <uiControls:DashItem.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToNavigationCommand}"
-                                          CommandParameter="{x:Static enums:AreaEnum.Atrio}" />
+                                          CommandParameter="{x:Static enums:AreaEnum.LugarSanto}" />
                 </uiControls:DashItem.GestureRecognizers>
             </uiControls:DashItem>
 
             <uiControls:DashItem Grid.Row="2" TitleText="LUGAR SANTÍSIMO" ImageSource="lugar_santisimo_highres">
                 <uiControls:DashItem.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToNavigationCommand}"
-                                          CommandParameter="{x:Static enums:AreaEnum.Atrio}" />
+                                          CommandParameter="{x:Static enums:AreaEnum.LugarSantisimo}" />
                 </uiControls:DashItem.GestureRecognizers>
             </uiControls:DashItem>
         </Grid>
