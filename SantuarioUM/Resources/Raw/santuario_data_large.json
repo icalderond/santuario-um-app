@@ -12,7 +12,7 @@
         {
           "id": "altar_del_sacrificio",
           "titulo": "Altar del Sacrificio",
-          "imagen": "img_altar_sacrificio.png",
+          "imagen": "img_altar_sacrificio_large.png",
           "dimensiones": {
             "rito": {
               "contenido": "El altar del sacrificio era el primer mueble al entrar al atrio. Estaba hecho de madera de acacia cubierta de bronce y tenía cuernos en sus esquinas. Allí se ofrecían sacrificios continuamente, incluyendo un cordero cada mañana y cada tarde (Levítico 6:12-13), simbolizando dependencia constante de Dios. Cuando un pecador traía su ofrenda, imponía sus manos sobre el animal confesando sus pecados, transfiriendo simbólicamente su culpa. Luego él mismo degollaba al cordero, comprendiendo que el pecado produce muerte. El animal debía ser perfecto, sin defecto y sin huesos rotos, mostrando la necesidad de un sacrificio puro.",
@@ -31,7 +31,7 @@
         {
           "id": "lavacro",
           "titulo": "Lavacro",
-          "imagen": "img_lavacro.png",
+          "imagen": "img_lavacro_large.png",
           "dimensiones": {
             "rito": {
               "contenido": "El lavacro estaba hecho de bronce pulido proveniente de los espejos de las mujeres (Éxodo 38:8). Contenía agua y era usado por los sacerdotes para lavarse las manos y los pies antes de ministrar o entrar al lugar santo. Este acto era obligatorio; de lo contrario, morirían (Éxodo 30:17-21). Representaba la necesidad de limpieza después del sacrificio, indicando que no basta con ser perdonado, sino que también es necesaria la purificación.",
@@ -58,7 +58,7 @@
         {
           "id": "mesa_panes",
           "titulo": "Mesa de los Panes",
-          "imagen": "img_mesa_panes.png",
+          "imagen": "img_mesa_panes_large.png",
           "dimensiones": {
             "rito": {
               "contenido": "La mesa de los panes estaba hecha de madera de acacia recubierta de oro. Sobre ella se colocaban doce panes, representando las doce tribus de Israel, renovados cada sábado. Siempre debía haber pan presente, mostrando la provisión constante de Dios. Los sacerdotes comían el pan antiguo dentro del santuario, indicando comunión continua.",
@@ -77,7 +77,7 @@
         {
           "id": "candelabro",
           "titulo": "Candelabro",
-          "imagen": "img_candelabro.png",
+          "imagen": "img_candelabro_large.png",
           "dimensiones": {
             "rito": {
               "contenido": "El candelabro era de oro puro, con siete lámparas que nunca debían apagarse. Era la única fuente de luz dentro del lugar santo, y se mantenía encendido continuamente mediante aceite puro.",
@@ -96,7 +96,7 @@
         {
           "id": "altar_incienso",
           "titulo": "Altar de Incienso",
-          "imagen": "img_altar_incienso.png",
+          "imagen": "img_altar_incienso_large.png",
           "dimensiones": {
             "rito": {
               "contenido": "El altar de incienso estaba delante del velo y se usaba para quemar incienso diariamente en la mañana y en la tarde. El humo representaba las oraciones del pueblo que subían a Dios.",
@@ -123,7 +123,7 @@
         {
           "id": "arca_pacto",
           "titulo": "Arca del Pacto",
-          "imagen": "img_arca_pacto.png",
+          "imagen": "img_arca_pacto_large.png",
           "dimensiones": {
             "rito": {
               "contenido": "El arca estaba hecha de madera de acacia cubierta de oro y contenía la ley de Dios, la vara de Aarón y el maná. Sobre ella estaba el propiciatorio con querubines. En el Día de la Expiación, el sumo sacerdote rociaba sangre sobre el propiciatorio para limpiar los pecados acumulados.",
