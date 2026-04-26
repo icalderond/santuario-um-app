@@ -30,7 +30,7 @@ SantuarioUM is a cross-platform mobile application built with .NET MAUI that pro
 
 📁 **[View Screenshots Folder](screenshots/)**
 
-![Main Article View](screenshots/mainarticle_ss.jpg)
+![Main Article View](screenshots/main_screenshot.png)
 *Main article view displaying sanctuary content with liturgical information*
 
 ## Architecture
