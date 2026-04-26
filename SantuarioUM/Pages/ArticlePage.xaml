@@ -13,44 +13,52 @@
             <Grid RowDefinitions="auto, *">
                 <StackLayout Spacing="15" Grid.Row="1">
                     <Image WidthRequest="400"
-                           HeightRequest="400"
                            BackgroundColor="Transparent"
                            Source="{Binding CurrentMueble.Imagen}" />
-                    
+
                     <!-- Ritual -->
                     <StackLayout>
                         <Label Text="{x:Static lang:TextResources.RitualText}" FontAttributes="Bold"
                                TextTransform="Uppercase"
                                FontSize="Title" />
                         <Label Text="{Binding CurrentMueble.Dimensiones.Rito.Contenido}" />
-                        <Label Margin="0,10,0,0" Text="{x:Static lang:TextResources.BibleVersesText}"
-                               FontAttributes="Bold" />
                         <CollectionView ItemsSource="{Binding CurrentMueble.Dimensiones.Rito.Citas}"
-                                        ItemTemplate="{StaticResource DescriptionTemplate}"/>
+                                        Margin="0,10,0,0"
+                                        ItemTemplate="{StaticResource PillTemplate}">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
+                            </CollectionView.ItemsLayout>
+                        </CollectionView>
                     </StackLayout>
-                    
+
                     <!-- Fulfilment -->
                     <StackLayout>
                         <Label Text="{x:Static lang:TextResources.FulfilmentText}" FontAttributes="Bold"
                                TextTransform="Uppercase"
                                FontSize="Title" />
                         <Label Text="{Binding CurrentMueble.Dimensiones.Cumplimiento.Contenido}" />
-                        <Label Margin="0,10,0,0" Text="{x:Static lang:TextResources.BibleVersesText}"
-                               FontAttributes="Bold" />
-                        <CollectionView ItemsSource="{Binding CurrentMueble.Dimensiones.Rito.Citas}"
-                                        ItemTemplate="{StaticResource DescriptionTemplate}"/>
+                        <CollectionView ItemsSource="{Binding CurrentMueble.Dimensiones.Cumplimiento.Citas}"
+                                        Margin="0,10,0,0"
+                                        ItemTemplate="{StaticResource PillTemplate}">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
+                            </CollectionView.ItemsLayout>
+                        </CollectionView>
                     </StackLayout>
-                    
+
                     <!-- Application -->
                     <StackLayout>
                         <Label Text="{x:Static lang:TextResources.ApplicationText}" FontAttributes="Bold"
                                TextTransform="Uppercase"
                                FontSize="Title" />
                         <Label Text="{Binding CurrentMueble.Dimensiones.Aplicacion.Contenido}" />
-                        <Label Margin="0,10,0,0" Text="{x:Static lang:TextResources.BibleVersesText}"
-                               FontAttributes="Bold" />
-                        <CollectionView ItemsSource="{Binding CurrentMueble.Dimensiones.Rito.Citas}"
-                                        ItemTemplate="{StaticResource DescriptionTemplate}"/>
+                        <CollectionView ItemsSource="{Binding CurrentMueble.Dimensiones.Aplicacion.Citas}"
+                                        Margin="0,10,0,0"
+                                        ItemTemplate="{StaticResource PillTemplate}">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
+                            </CollectionView.ItemsLayout>
+                        </CollectionView>
                     </StackLayout>
                 </StackLayout>
             </Grid>

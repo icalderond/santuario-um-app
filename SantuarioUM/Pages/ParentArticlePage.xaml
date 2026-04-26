@@ -35,8 +35,12 @@
                            FontSize="Large" />
                     <CollectionView Grid.Row="1"
                                     ItemsSource="{Binding CurrentArea.Muebles}"
-                                    ItemTemplate="{StaticResource  FurnituresKey}" />
-
+                                    ItemTemplate="{StaticResource FurnitureCardTemplate}"
+                                    HeightRequest="200">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+                    </CollectionView>
                 </Grid>
             </Grid>
         </ScrollView>
