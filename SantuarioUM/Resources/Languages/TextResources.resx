@@ -36,4 +36,13 @@
     <data name="ApplicationText" xml:space="preserve">
         <value>Aplicación</value>
     </data>
+    <data name="OuterCourtText" xml:space="preserve">
+        <value>Atrio</value>
+    </data>
+    <data name="HolyPlaceText" xml:space="preserve">
+        <value>Lugar Santo</value>
+    </data>
+    <data name="MostHolyPlaceText" xml:space="preserve">
+        <value>Lugar Santísimo</value>
+    </data>
 </root>

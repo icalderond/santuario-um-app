@@ -80,5 +80,23 @@ namespace SantuarioUM.Resources.Languages {
                 return ResourceManager.GetString("ApplicationText", resourceCulture);
             }
         }
+        
+        internal static string OuterCourtText {
+            get {
+                return ResourceManager.GetString("OuterCourtText", resourceCulture);
+            }
+        }
+        
+        internal static string HolyPlaceText {
+            get {
+                return ResourceManager.GetString("HolyPlaceText", resourceCulture);
+            }
+        }
+        
+        internal static string MostHolyPlaceText {
+            get {
+                return ResourceManager.GetString("MostHolyPlaceText", resourceCulture);
+            }
+        }
     }
 }
